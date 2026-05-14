@@ -1,0 +1,17 @@
+{
+  "default": {
+    "require": [
+      "steps/**/*.js",
+      "supports/**/*.js"
+    ],
+    "paths": [
+      "features/**/*.feature"
+    ],
+    "publishQuiet": true,
+    "format": [
+      "progress",
+      "html:reports/cucumber-report.html"
+    ],
+    "parallel": 1
+  }
+}
