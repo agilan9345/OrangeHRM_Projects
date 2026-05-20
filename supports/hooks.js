@@ -5,7 +5,12 @@ setDefaultTimeout(60 * 1000);
 
 Before(async function () {
   this.browser = await chromium.launch({ headless: false });
-  this.context = await this.browser.newContext();
+  this.context = await this.browser.newContext({
+    recordVideo: {
+      dir: 'reports/videos',
+      size: { width: 1280, height: 720 }
+    }
+  });
   this.page = await this.context.newPage();
 });
 

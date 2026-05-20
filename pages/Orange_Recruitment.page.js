@@ -31,23 +31,26 @@ class RecruitmentPages {
         await this.page.getByPlaceholder('Type here').nth(0).fill('agilanMunisamy2003@gmail.com');
         await this.page.getByPlaceholder('Type here').nth(1).fill('9876543210');
     }
-    
+
     async uploadResume() {
-        const filePath = path.resolve('"C:/Users/amunisam/OneDrive - Capgemini/Desktop/Resume/Roll No 21IT6301.pdf"');
+        const filePath = path.resolve("C:/Users/amunisam/OneDrive - Capgemini/Desktop/Resume/Roll No 21IT6301.pdf");
         await this.page.setInputFiles('input[type="file"]', filePath);
     }
 
     async enterKeywords() {
-        await this.page
-            .getByPlaceholder('Enter comma separated words...')
-            .fill('Automation Testing, Playwright');
+        await this.page.getByPlaceholder('Enter comma seperated words...')
+            .fill('Software Engineer, Java, Selenium');
     }
 
     async setDateOfApplication() {
-        await this.page.locator('input[placeholder="yyyy-mm-dd"]')
-            .first()
-            .fill('2024-06-21');
+        await this.page.getByPlaceholder('yyyy-dd-mm').fill('2024-06-21');
     }
+
+    // async addNotes() {
+    //     await this.page.locator('.oxd-textarea oxd-textarea--active oxd-textarea--resize-vertical')
+    //         .fill('This candidate has strong technical skills and relevant experience in software development.');
+
+    // }
 
     async clickSaveBtn() {
         await this.page.getByRole('button', { name: 'Save' }).click();

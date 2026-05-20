@@ -18,4 +18,5 @@ Feature: Admin Functionality
     And user uploads a resume
     And user enters keywords
     And user sets the date of application
+   # And user sets a notes in page
     And user clicks the save button to save the employee credentials

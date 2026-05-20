@@ -35,6 +35,12 @@ When('user sets the date of application', async function () {
     await this.recruitmentpages.setDateOfApplication();
 });
 
+// When('user sets a notes in page', async function () {
+//     await this.recruitmentpages.addNotes();
+// });
+
+
+
 When('user clicks the save button to save the employee credentials', async function () {
     await this.recruitmentpages.clickSaveBtn();
 });
